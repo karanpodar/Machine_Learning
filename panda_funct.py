@@ -103,7 +103,7 @@ df = pd.read_csv('credit_scoring_sample.csv')  # to load a csv file
 #df['first'].map({'Jane' : 'John, "Chris": "Carter"})  #it will replace these values and make other values as NaN
 
 #replace
-#df['first'].map({'Jane' : 'John, "Chris": "Carter"})  #it will replace these values and keep other values as is
+#df['first'].replace({'Jane' : 'John, "Chris": "Carter"})  #it will replace these values and keep other values as is
 
 #-----------------------------------------------------------------------------------------------#
 
@@ -173,6 +173,10 @@ df = pd.read_csv('credit_scoring_sample.csv')  # to load a csv file
 
 #df.isna()  #to print values which NaN in a boolean table
 
+#df.isnull().value_counts()  #to print true and false in the table
+
+#df.isnull().values.any()  #to print true and false in the table
+
 #df.fillna('MISSING')  # to replace all the NaN values with 'Missing' as the value
 
 #df.dtypes  # to show cols datatypes 
@@ -183,6 +187,8 @@ df = pd.read_csv('credit_scoring_sample.csv')  # to load a csv file
 #df = pd.read_csv('credit_scoring_sample.csv', na_values=na_vals)  # to load a csv file and convert custom none values as NaN values
 
 #df['age'].unique()  #to print unique values in the column
+
+# print(categorical.nunique()) #print unique values of each cols
 
 #df['date'] = pd.to_datetime(df['date'], format='%Y....')  # converts str to datetime
 
@@ -203,3 +209,6 @@ df = pd.read_csv('credit_scoring_sample.csv')  # to load a csv file
 
 #df.to_csv('path')   # to write dataframe to csv
 
+# X = X.astype(int)   # to replace Boolean(true, false) to 0, 1s
+
+# X = X.replace({True: 1, False: 0})  # to replace Boolean(true, false) to 0, 1s
