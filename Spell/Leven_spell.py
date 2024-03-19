@@ -1,9 +1,15 @@
 from collections import Counter
 import Levenshtein
 import string
-from nltk.tokenize import word_tokenize
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.corpus import stopwords
 from symspellpy import SymSpell
 
+# nltk.download('averaged_perceptron_tagger')
+# Can Train POS tagging models
+
+stop_words = set(stopwords.words('english'))
 
 class Levencandidates:
 
@@ -34,41 +40,74 @@ class Levencandidates:
 
     def candidate(self, word, comp):
         if ((self.check_if_word(word) == True) and (self.check_if_present(word, comp) == True)):
+            
             candidate = []
             d1 = {}
+            i = 2
             for x in comp:
                 dist = self.leven(word, x)
 #                print('in if', word, x, dist)
-                if dist <= 2:
+                if dist <= i:
                     d1[x] = dist
                     candidate.append(x)
+
             return d1
+        
         return word
+    
+    def check_pos(self, sent):
+        pos_word = []
+        for i in sent:
+            wordsList = nltk.word_tokenize(i)
+            wordsList = [w for w in wordsList] 
+            tagged = nltk.pos_tag(wordsList)
+            print(tagged)
+            pos_word.append(tagged)
+        return pos_word    
+    
 
 text = 'Hi! 1 My nam is Karan. Whatiz yournam. im Jake'
 
 symsp = SymSpell(max_dictionary_edit_distance=0)
 
-symsp.load_dictionary('Dict.txt',\
+symsp.load_dictionary(r'C:\Users\KARAN\Desktop\Python\VsCode_py\python_learn\Spell\Dict.txt',\
                       term_index=0, \
                       count_index=1, \
                       separator=' ')
 
+
+# Word Segmentation
 test = symsp.word_segmentation(text)
-print(test)
+# print(test)
 
+# Loading dictionary keys
 comp = symsp.words.keys()
-#print(comp)
+# print(comp)
 
+# Sentence tokenising the input string
+# sent_token = sent_tokenize(test.corrected_string)
+
+# Word tokenising the input string
 tokenized_words = word_tokenize(test.corrected_string) 
 
-# with open("Test_Dict.txt", "r") as infile:
-#     comp = word_tokenize(infile.read())
-
+# Preparing dictionary of candidates
 Cand = Levencandidates()                  
+pred = {}
+
+# print(Cand.check_pos(sent_token))
+
 
 for x in tokenized_words:
     # input.append(x) 
-    Test = Cand.candidate(x, comp)                    
-    print(f'For input {x} the best candidates are: {Test}')
+    Test = Cand.candidate(x, comp)
+    pred[x] = Test           
+   # print(f'For input {x} the best candidates are: {Test}')
+    
+    for i in pred.keys():
+        print('in loop 1', i)
+        for j in pred[i]:
+            print('in loop 2', j)
+            if i != j:
+                print(j , pred[i][j])
 
+# print(pred)
