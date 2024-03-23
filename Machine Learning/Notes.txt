@@ -1,0 +1,21 @@
+Supervised - Classification (For Binary values), Regreesion (For continous values)
+
+Classification - KNN, Descision Trees, Logistic Regreesion, Random forest, Naive Bayes
+Regression - Linear regression
+
+Random Forest -
+-- Proximity matrix is the closeness between different data when processed through different trees.
+-- 1 - Proximity matrix is distance matrix which shows distance between 2 or more data 
+
+Descision matrix - 
+when matrix is 2x2
+-- sensitivity = True Positive / (True Positive + False negative)
+-- specificity = True negative / (True negative + False Positive)
+-- precision = TP / (TP + FP)
+-- recall = TP / (TP + FN)
+when matrix is NxN 
+-- sensitivity(1) = True Positive(1) / (True Positive(1) + False negative(1) + .. + False negative(N))
+-- sensitivity(2) = True Positive(2) / (True Positive(2) + False negative(1) + .. + False negative(N)).......
+-- specificity(1) = True negative(1) / (True negative(1) + False Positive(1) + .. + False Positive(N))
+-- specificity(2) = True negative(2) / (True negative(2) + False Positive(1) + .. + False Positive(N)).......
+
