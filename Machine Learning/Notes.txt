@@ -1,7 +1,10 @@
 Supervised - Classification (For Binary values), Regreesion (For continous values)
+Unsupervised - Clustering, Dimensionality Reduce
 
 Classification - KNN, Descision Trees, Logistic Regreesion, Random forest, Naive Bayes
 Regression - Linear regression
+
+Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture 
 
 Random Forest -
 -- Proximity matrix is the closeness between different data when processed through different trees.
@@ -19,3 +22,41 @@ when matrix is NxN
 -- specificity(1) = True negative(1) / (True negative(1) + False Positive(1) + .. + False Positive(N))
 -- specificity(2) = True negative(2) / (True negative(2) + False Positive(1) + .. + False Positive(N)).......
 
+Linear Regression - (coefficient = slope, constant = intercept)
+Bias - the inability to capture the true relationship 
+Variance - the difference in the model hen using different datasets 
+-- Overfit - when the squiggly line fits TRAINING set well, but not the test set it is Overfit
+-- regularisation, bagging, boosting
+-- Bagging (bootstrap aggregating) is an ensemble method that involves training multiple models independently on random subsets of the data, and aggregating their predictions through voting or averaging.
+R square = (SS(mean) - SS(fit)) / SS(mean)  [SS is Sum of sqaures]
+p-value in linear regression tells if the coefficient is near to 0 or not 
+p-value is 2 if there are 2 parameters(X, Y), it will be 1 if there is only parameter(y) so on and so forth 
+coefficient tells the direction of line. If positive the line starts at 0 to infinity, if negative it starts from high and then decline, if 0 it is straigth line parallel to x axis 
+coefficient could be compared as angle 
+
+K-means clustering -
+Elbow plot helps us in figuring out the most efficient number of clusters
+
+For all algo -
+ROC - Reciever Operator Characteristic graph provide a simple way to summarize multiple Descision matrix info
+AUC - Area under the cruve 
+If AUC of 1 algo covers more area than the AUC of another then that algo is better
+Surpise - Suprise is inverse of log of probability 
+Entropy - If we calculate Surpise for 100 times and find out Surprise for each time that is called as Entropy 
+p-value is less than threshold (usually 0.05) then we can reject the null hypothesis 
+The central limit theorem says that the sampling distribution of the mean will always be normally distributed, as long as the sample size is large enough
+
+Naive Bayes - 
+We add 1 box to every possibilty which is called as blackbox to avoid getting a 0 probability
+
+Decision Tree- 
+-- When it classifies any object it is a classification tree
+-- When it predicts any values it is a regression tree
+-- When leaf has values for both Yes & No, it is called as impure
+-- Gini impurity is the total weighted averageg of the leaves
+
+Encoding - One hot encoding, label encoding, target encoding(maybe weighted mean or not) 
+
+Target encoding -
+It can lead to data leakage which leads to overfit models
+to avoid that we can use K Fold target Encoding
