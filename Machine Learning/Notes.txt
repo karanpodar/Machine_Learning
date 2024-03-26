@@ -4,7 +4,8 @@ Unsupervised - Clustering, Dimensionality Reduce
 Classification - KNN, Descision Trees, Logistic Regreesion, Random forest, Naive Bayes
 Regression - Linear regression
 
-Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture 
+Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture
+Dimensionality Reduce - PCA (Principal Component Analysis), SVD (Singular Value Decomposition)
 
 Random Forest -
 -- Proximity matrix is the closeness between different data when processed through different trees.
@@ -24,7 +25,7 @@ when matrix is NxN
 
 Linear Regression - (coefficient = slope, constant = intercept)
 Bias - the inability to capture the true relationship 
-Variance - the difference in the model hen using different datasets 
+Variance - the difference in the prediction of the model when using different datasets 
 -- Overfit - when the squiggly line fits TRAINING set well, but not the test set it is Overfit
 -- regularisation, bagging, boosting
 -- Bagging (bootstrap aggregating) is an ensemble method that involves training multiple models independently on random subsets of the data, and aggregating their predictions through voting or averaging.
@@ -37,6 +38,35 @@ coefficient could be compared as angle
 K-means clustering -
 Elbow plot helps us in figuring out the most efficient number of clusters
 
+Decision Tree- 
+-- When it classifies any object it is a classification tree
+-- When it predicts any values it is a regression tree
+-- When leaf has values for both Yes & No, it is called as impure
+-- Gini impurity is the total weighted averageg of the leaves
+
+SVM & SVC-
+Margin - Distance between hyperplane and nearest point is called margin
+Hyperplane - The threshold which is used to divide the 2 set of points
+Points are called as vectors
+Support Vectors - the nearest points from hyperplane are called as support vectors
+We need to have the maximum distance between the 2 support vectors (Maximal margin classifier)
+Soft margins - when we allow misclassifications, distance between observations and the threshold is called soft margin
+SVC (Support vector classifier) - when we use normal dataset(unmodified dataset) to classify the data using plane
+SVM (Support vector Machine) - when we use kernel functions to sysematically find SVC
+Kernel trick - The kernel function doesnt transform the data in higher dimesnions, rather it just does teh calculation
+Radial Basis function SVM (RBF SVM) - plots data in infinite dimensions and works as weighted nearest neighbour model (it is preferred when the data is linearly non separable)
+
+Naive Bayes - 
+We add 1 box to every possibilty which is called as blackbox to avoid getting a 0 probability
+
+Gaussian Naive Bayes-
+In this we calulate the Mean and Standard deviation for each column.
+Then we plot Gaussian Distribution for each dataset(column-wise).
+Then we find the prior probability
+To Predict any value we take each probabilities and add their log values(to avoid underflow) and see which is higher
+--Underflow - when any value is very close to 0 
+--Prior probability - the initial probability based on taining data is called prior probability
+
 For all algo -
 ROC - Reciever Operator Characteristic graph provide a simple way to summarize multiple Descision matrix info
 AUC - Area under the cruve 
@@ -45,18 +75,27 @@ Surpise - Suprise is inverse of log of probability
 Entropy - If we calculate Surpise for 100 times and find out Surprise for each time that is called as Entropy 
 p-value is less than threshold (usually 0.05) then we can reject the null hypothesis 
 The central limit theorem says that the sampling distribution of the mean will always be normally distributed, as long as the sample size is large enough
+Cross-validation - creates multiple random splits of the dataset into training and validation data. For each such split, the model is fit to the training data, and predictive accuracy is assessed using the validation data. The results are then averaged over the splits.
+Bias - the inability to capture the true relationship 
+Variance - the difference in the prediction of the model when using different datasets
+Data Leakage - it happens when the training data contains information about the target
 
-Naive Bayes - 
-We add 1 box to every possibilty which is called as blackbox to avoid getting a 0 probability
+Bias -
+The bias is known as the difference between the prediction of the values by the Machine Learning model and the correct value. 
+Being high in biasing gives a large error in training as well as testing data. 
+It recommended that an algorithm should always be low-biased to avoid the problem of underfitting. 
+By high bias, the data predicted is in a straight line format, thus not fitting accurately in the data in the data set. 
+Such fitting is known as the Underfitting of Data.
 
-Decision Tree- 
--- When it classifies any object it is a classification tree
--- When it predicts any values it is a regression tree
--- When leaf has values for both Yes & No, it is called as impure
--- Gini impurity is the total weighted averageg of the leaves
-
-Encoding - One hot encoding, label encoding, target encoding(maybe weighted mean or not) 
+Variance -
+The variability of model prediction for a given data point which tells us the spread of our data is called the variance of the model. 
+The model with high variance has a very complex fit to the training data and thus is not able to fit accurately on the data which it hasn’t seen before.
+As a result, such models perform very well on training data but have high error rates on test data. 
+When a model is high on variance, it is then said to as Overfitting of Data. 
+Overfitting is fitting the training set accurately via complex curve and high order hypothesis but is not the solution as the error with unseen data is high. 
+While training a data model variance should be kept low.
 
 Target encoding -
+Data Leakage - it happens when the training data contains information about the target
 It can lead to data leakage which leads to overfit models
 to avoid that we can use K Fold target Encoding
