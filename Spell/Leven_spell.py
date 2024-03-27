@@ -5,6 +5,7 @@ import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from symspellpy import SymSpell
+from gensim.models import Word2Vec
 
 # nltk.download('averaged_perceptron_tagger')
 # Can Train POS tagging models
@@ -39,7 +40,8 @@ class Levencandidates:
         return True
 
     def candidate(self, word, comp):
-        if ((self.check_if_word(word) == True) and (self.check_if_present(word, comp) == True)):
+        if ((self.check_if_word(word) == True)): 
+            #and (self.check_if_present(word, comp) == True)):
             
             candidate = []
             d1 = {}
@@ -66,7 +68,10 @@ class Levencandidates:
         return pos_word    
     
 
-text = 'Hi! 1 My nam is Karan. Whatiz yournam. im Jake'
+#text = 'Hi! 1 My nam is Karan. Whatiz yournam. im Jake'
+
+text = 'Credt cart'
+
 
 symsp = SymSpell(max_dictionary_edit_distance=0)
 
@@ -88,7 +93,8 @@ comp = symsp.words.keys()
 # sent_token = sent_tokenize(test.corrected_string)
 
 # Word tokenising the input string
-tokenized_words = word_tokenize(test.corrected_string) 
+#tokenized_words = word_tokenize(test.corrected_string) 
+tokenized_words = word_tokenize(text) 
 
 # Preparing dictionary of candidates
 Cand = Levencandidates()                  
@@ -100,14 +106,8 @@ pred = {}
 for x in tokenized_words:
     # input.append(x) 
     Test = Cand.candidate(x, comp)
-    pred[x] = Test           
+    print(Test)
+    # pred[x] = Test.keys()           
    # print(f'For input {x} the best candidates are: {Test}')
-    
-    for i in pred.keys():
-        print('in loop 1', i)
-        for j in pred[i]:
-            print('in loop 2', j)
-            if i != j:
-                print(j , pred[i][j])
 
-# print(pred)
+print(pred)
