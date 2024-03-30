@@ -1,15 +1,43 @@
-Supervised - Classification (For Binary values), Regreesion (For continous values)
+Supervised - Classification (For Binary values), Regression (For continous values)
 Unsupervised - Clustering, Dimensionality Reduce
 
-Classification - KNN, Descision Trees, Logistic Regreesion, Random forest, Naive Bayes
+Classification - KNN, Descision Trees, Logistic Regression, Random forest, Naive Bayes
 Regression - Linear regression
 
-Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture
+Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture, DBScan
 Dimensionality Reduce - PCA (Principal Component Analysis), SVD (Singular Value Decomposition)
 
+p-value -
+The p-value only tells you how likely the data you have observed is to have occurred under the null hypothesis. 
+If the p-value is below your threshold of significance (typically p < 0.05), then you can reject the null hypothesis, 
+but this does not necessarily mean that your alternative hypothesis is true.
+higher the p-value, lower the importance of a feature
+-- It is sum of 3 parts - (1. The probability random chance would result in observation)
+(2. The probability of observing something else which is equally rare)
+(3. The probability of observing something rarer or more extreme)
+
 Random Forest -
+To create Trees-
+1. Using bootstrapped method create a dataset
+2. Only considering a random subset of variables at each step
+3. Do this for n number of times
+4. Use the out-of-bag dataset to see the accuracy
+5. We change the number of variables used in step 2 and see which gives us the most accuracy 
+Bagging - 'B'ootstrapping data plus using 'AGG'regating to make decision is Bagging
+Out-of-bag dataset - data which didnt make it to bootstrap dataset
+Missing values -
+For missing values we take Mode, Median of values with similar outputs
+Then we find out similarity between each rows using Proximity matrix
+For each output of tree whenever any row falls under same category we add 1 to its corresponding row & col in matrix
+Once all iterations are done we divide each value of matrix with number of trees
+Then based on the Proximity matrix we derive values for the missing values using probabilities
 -- Proximity matrix is the closeness between different data when processed through different trees.
--- 1 - Proximity matrix is distance matrix which shows distance between 2 or more data 
+-- 1 - Proximity matrix is distance matrix which shows distance between 2 or more data
+
+ADABoost - 
+Stump - a tree with only 1 root and 2 leaves nodes
+Usually in Random forest each tree is equally worthy of other trees, but in ADABoost we use stumps(weak learners) and there some stumps which have more say than others
+Each stump is made by taking previous stump's mistakes
 
 Descision matrix - 
 when matrix is 2x2
@@ -37,12 +65,56 @@ coefficient could be compared as angle
 
 K-means clustering -
 Elbow plot helps us in figuring out the most efficient number of clusters
+-- Centroid based - in which new point is predicted based on the distance from Centroid
+-- Single linkage - in which new point is predicted based on the distance from Closet point in the cluster
+-- Complete linkage - in which new point is predicted based on the distance from farthest point in the cluster
+
+Hierarchical clustering -
+We find similarity(mostly using Euclidean distance) between 2 rows and map it together and keep doing that until all rows are clustered
+Height of the dendogram tells us the similarity between 2 cluster, smaller Height means more similar and vice versa
+
+DBScan (Density based scan)- 
+- we take all points randomly and create a circle of some radius around each point and see how many points it overlaps
+- we fix a value of overlapping points like 4 in our case and all the points which overall 4 points are called as Core points and remaining are non core points
+- we take 1 core point and all the other core points overlapping that point is added to the cluster
+- Once all the core points are added to clusters, we check if any non core point overlaps core point
+- if yes we add it to the cluster, if not we dont add it to cluster
+- if any non core point falls in the range of 2 different cluster core point, we add it to cluster whichever we started first with
 
 Decision Tree- 
+Root Node --> Internal nodes/ branches --> leaf node
 -- When it classifies any object it is a classification tree
 -- When it predicts any values it is a regression tree
--- When leaf has values for both Yes & No, it is called as impure
--- Gini impurity is the total weighted averageg of the leaves
+
+Classification Decision tree -
+Impure - When leaf has values for both Yes & No, it is called as impure
+Gini impurity of 1 leaf = 1 - square(probability of Yes) - square(probability of No)
+Total Gini impurity is the total weighted average of the leaves
+i.e. Total Gini Impurity = ((count of leaf 1)/(count of Leaf 1 & 2))*Gini impurity of leaf 1 + ((count of leaf 2)/(count of Leaf 1 & 2))*Gini impurity of leaf 2
+In case of continous values we will sort the column and take the average of adjacent rows and find gini impurity based on it.
+Lowest Gini impurity column becomes the root node and we continue till there are no impure nodes which become leaf nodes
+If a node has more impurity than existing we can ignore that node to avoid overfit. 
+-- Missing data - 1. We can take Mean/Median in case of continous values or Mode in case of non-continous
+2. we can find another column with highest correlation and predict using linear regression in case of continous values or in case of non linear select values from corresponding column 
+
+Regression Tree -
+- Take 2 points in graph and calculate their Squared residuals by taking averages
+- Take sum of Squared residuals(SSR) for all points and plot a graph (Similar to Elbow plot in K-means)
+- Value with least Sum of Squared residuals will be root, then split the points on the left and right and do the hole process again to find internal nodes until leaf nodes
+- We can have minimum number of points to allow for splits, to avoid overfitting (Usually 20) - which means if a node has less than 20 points we will not split it
+In case of multiple columns we find the lowest SSR and make that as the root and follow same process like above.
+
+Pruning Regression Trees -
+Pruning is done to avoid overfitting data
+Steps for Cost complexity Pruning -
+1. create sub-trees by reducing each node in an iteration
+2. To find out sum of sqaured residuals(SSR) of each sub tree, by adding SSR of each leaf
+3. calculate tree score of each tree
+-- Tree score = SSR + (Alpha * Terminal)
+-- Tree complexity penalty = (Alpha * Terminal)
+-- Terminal is the number of leaves
+-- Alpha is a constant value calculated by using cross validation
+4. pick the tree with lowest Tree score
 
 SVM & SVC-
 Margin - Distance between hyperplane and nearest point is called margin
@@ -57,6 +129,7 @@ Kernel trick - The kernel function doesnt transform the data in higher dimesnion
 Radial Basis function SVM (RBF SVM) - plots data in infinite dimensions and works as weighted nearest neighbour model (it is preferred when the data is linearly non separable)
 
 Naive Bayes - 
+We calculate probabilities for each values using Bayes Theorem and based on that we classify
 We add 1 box to every possibilty which is called as blackbox to avoid getting a 0 probability
 
 Gaussian Naive Bayes-
@@ -67,18 +140,48 @@ To Predict any value we take each probabilities and add their log values(to avoi
 --Underflow - when any value is very close to 0 
 --Prior probability - the initial probability based on taining data is called prior probability
 
+Dimension Reduction-
+PCA -
+PCA reduces dimensions based on the most variations 
+
+LDA -
+LDA is used for maximising the seperatibility between multiple categories, like PCA it creates a axis which maximises the seperatibility
+LDA categories - 1. 'Maximise' the distance between means  2. 'Minimise' variation (represented as scatter)
+
+MDS - 
+MDS(Multi-dimensional Scaling) - has 2 types metric/Classical(Also called as PCoA - Principal Coordinate Analysis) and Non-metric
+PCoA reduces dimensions based on the distance between 2 or more columns rest eveything is similar to PCA
+There are multiple ways to find distance between 2 columns like Euclidean distance, log fold distance, Manhattann, Hamming
+
+t-SNE -
+t-SNE - t-distributed Stochastic Neighbor Embedding 
+It finds a way to project data into a low dimensional space so that the clustering in high dimension is preserved
+For ex - in 2D graph there are 3 clusters, this algo will take all points from cluster and randomly plot them on a linear graph
+Then each point will move closer to its similar points until all the similar values are close to each other
+
+UMAP -
+Uniform Manifold Approximation and Projection
+It reduces dimensions based on the similarity scores and forms cluster as similar approach like t-SNE 
+Difference is t-SNE randomly plots points on linear graph whereas UMAP uses Spectral Embedding to plot on liner graph
+Also t-SNE moves only 1 point in each iteration whereas UMAP moves more than 1 point in each iteration based on similarity score
+
 For all algo -
 ROC - Reciever Operator Characteristic graph provide a simple way to summarize multiple Descision matrix info
 AUC - Area under the cruve 
 If AUC of 1 algo covers more area than the AUC of another then that algo is better
 Surpise - Suprise is inverse of log of probability 
-Entropy - If we calculate Surpise for 100 times and find out Surprise for each time that is called as Entropy 
+Surpise = log( 1/ p(x) )
+Entropy - If we calculate Surpise for 100 times and find out Surprise for each time that is called as Entropy
+Entropy = Summation( p(x) * log(1/ p(x)) ) 
+Entropy is closer to value which has higher probability or p(x)
+Entropy in laymans term is the measure of disorder or impurity in the given dataset.
 p-value is less than threshold (usually 0.05) then we can reject the null hypothesis 
 The central limit theorem says that the sampling distribution of the mean will always be normally distributed, as long as the sample size is large enough
 Cross-validation - creates multiple random splits of the dataset into training and validation data. For each such split, the model is fit to the training data, and predictive accuracy is assessed using the validation data. The results are then averaged over the splits.
 Bias - the inability to capture the true relationship 
 Variance - the difference in the prediction of the model when using different datasets
 Data Leakage - it happens when the training data contains information about the target
+Central limit Theorem - No matter whichever distribution we start with their means will be a normal distribution.
 
 Bias -
 The bias is known as the difference between the prediction of the values by the Machine Learning model and the correct value. 
@@ -88,12 +191,16 @@ By high bias, the data predicted is in a straight line format, thus not fitting 
 Such fitting is known as the Underfitting of Data.
 
 Variance -
+The variance measures the average degree to which each point differs from the mean.
 The variability of model prediction for a given data point which tells us the spread of our data is called the variance of the model. 
 The model with high variance has a very complex fit to the training data and thus is not able to fit accurately on the data which it hasn’t seen before.
 As a result, such models perform very well on training data but have high error rates on test data. 
 When a model is high on variance, it is then said to as Overfitting of Data. 
 Overfitting is fitting the training set accurately via complex curve and high order hypothesis but is not the solution as the error with unseen data is high. 
 While training a data model variance should be kept low.
+
+Overfit - High variance, low bias - when our model does well with training data but not any other data
+Underfit - low variance, high bias - when our model still has scope of improvement in the training data
 
 Target encoding -
 Data Leakage - it happens when the training data contains information about the target
