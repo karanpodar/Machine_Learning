@@ -1,0 +1,15 @@
+Class
+Objects
+Polymorphism
+Encapsulation
+Inheritance
+Data Abstraction
+
+--Types of Inheritance
+Single Inheritance: Single-level inheritance enables a derived class to inherit characteristics from a single-parent class.
+Multilevel Inheritance: Multi-level inheritance enables a derived class to inherit properties from an immediate parent class which in turn inherits properties from his parent class. 
+Hierarchical Inheritance: Hierarchical-level inheritance enables more than one derived class to inherit properties from a parent class.
+Multiple Inheritance: Multiple-level inheritance enables one derived class to inherit properties from more than one base class.
+
+--Polymorphism
+Polymorphism simply means having many forms. For example, we need to determine if the given species of birds fly or not, using polymorphism we can do this using a single function.
