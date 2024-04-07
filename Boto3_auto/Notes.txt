@@ -1,0 +1,8 @@
+In Client we are calling a low level API to perform a method 
+
+Whereas in Resource we can access the AWS objects as python objects, which makes it easier to use as we dont need to give in all the detials like key, name of bucket etc everytime.
+
+Some AWS operations return results that are incomplete and require subsequent requests in order to attain the entire result set. The process of sending subsequent requests to continue where a previous request left off is called pagination.
+
+Waiters use a client’s service operations to poll the status of an AWS resource and suspend execution until the AWS resource reaches the state that the waiter is polling for or a failure occurs while polling.
+Basically it waits until the resource is available.
