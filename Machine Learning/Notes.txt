@@ -35,9 +35,10 @@ Then based on the Proximity matrix we derive values for the missing values using
 -- 1 - Proximity matrix is distance matrix which shows distance between 2 or more data
 
 ADABoost - 
-Stump - a tree with only 1 root and 2 leaves nodes
+Stump (weak-learners) - a tree with only 1 root and 2 leaves nodes
 Usually in Random forest each tree is equally worthy of other trees, but in ADABoost we use stumps(weak learners) and there some stumps which have more say than others
 Each stump is made by taking previous stump's mistakes
+Learning rate is used to control loss function for calculating the weight of base model.
 
 Descision matrix - 
 when matrix is 2x2
@@ -57,7 +58,11 @@ Variance - the difference in the prediction of the model when using different da
 -- Overfit - when the squiggly line fits TRAINING set well, but not the test set it is Overfit
 -- regularisation, bagging, boosting
 -- Bagging (bootstrap aggregating) is an ensemble method that involves training multiple models independently on random subsets of the data, and aggregating their predictions through voting or averaging.
-R square = (SS(mean) - SS(fit)) / SS(mean)  [SS is Sum of sqaures]
+
+Least Square method is used to calulate the best fit line, in which sum of sqaure residual is least
+-- In this we take the a straigth line parallel to x axis and rotate it to get the least square value
+
+R square (means Residual square) = (SS(mean) - SS(fit)) / SS(mean)  [SS is Sum of sqaures]
 p-value in linear regression tells if the coefficient is near to 0 or not 
 p-value is 2 if there are 2 parameters(X, Y), it will be 1 if there is only parameter(y) so on and so forth 
 coefficient tells the direction of line. If positive the line starts at 0 to infinity, if negative it starts from high and then decline, if 0 it is straigth line parallel to x axis 
@@ -116,6 +121,12 @@ Steps for Cost complexity Pruning -
 -- Alpha is a constant value calculated by using cross validation
 4. pick the tree with lowest Tree score
 
+Gradient Boost - Regression
+1. Start with a tree with only 1 leaf which has avg value of the variable to be predicted
+2. Create & add a tree with taking residuals as reference and using some learning rate(between 0 & 1)
+3. Keep adding trees taking new residuals into conisderation based on errors made by previous tree
+
+
 SVM & SVC-
 Margin - Distance between hyperplane and nearest point is called margin
 Hyperplane - The threshold which is used to divide the 2 set of points
@@ -167,7 +178,7 @@ Also t-SNE moves only 1 point in each iteration whereas UMAP moves more than 1 p
 
 For all algo -
 ROC - Reciever Operator Characteristic graph provide a simple way to summarize multiple Descision matrix info
-AUC - Area under the cruve 
+AUC - Area under the curve 
 If AUC of 1 algo covers more area than the AUC of another then that algo is better
 Surpise - Suprise is inverse of log of probability 
 Surpise = log( 1/ p(x) )
@@ -206,3 +217,21 @@ Target encoding -
 Data Leakage - it happens when the training data contains information about the target
 It can lead to data leakage which leads to overfit models
 to avoid that we can use K Fold target Encoding
+
+
+Deep Learning -
+
+Neural Networks - 
+
+Activation Functions - Curved or bent lines are called activation functions
+
+Different types of activation functions - 
+1. Soft Plus - in which we use curved lines
+2. ReLU (Rectified Linear Unit) - usually a bent line
+3. Sigmoid - s shaped curved line  
+
+Hidden layers - Nodes in the middle of input & output nodes are called hidden layers
+Usually Hit n trial methods is used to confirm the number of hidden layers
+
+Weights - the parameters we multiply in hidden layers are Weights
+Biases - the parameters we add in hidden layers are Biases
