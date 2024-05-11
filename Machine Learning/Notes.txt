@@ -235,3 +235,25 @@ Usually Hit n trial methods is used to confirm the number of hidden layers
 
 Weights - the parameters we multiply in hidden layers are Weights
 Biases - the parameters we add in hidden layers are Biases
+
+
+
+
+
+Prompt engineering - (https://medium.com/@bryan.mckenney/teaching-llms-to-think-and-act-react-prompt-engineering-eef278555a2e)
+https://www.youtube.com/watch?v=1c9iyoVIwDs&ab_channel=IBMTechnology
+- RAG(Retireval Augmented Generator) (Improve domain knowledge) - usually adding a retierver which gets data from a set of data or database (Used to overcome Incorrect, Outdated information and adding source to the content)
+- COT(Chain of thought) (to get precise output) - to break down the prompt/steps and get more precise answer and improvise the result. Promoting ideas using 'thoughts'  in the form of chunks one by one to obtain actual answers. Language models arrive at your desired answers through reasoning and logic.
+- ReAct(Thought, Action, and Observation) - Different from the chain of thoughts, this involves both private knowledge base (db) and public language model (llm) data. If information isn't in the knowledge base, it goes back to the public llm data (trained data) for results.
+- DSP(Direct Stimulus Prompting)- The latest method involves hinting the prompt with a specific hint to get the answers.
+
+Few-shot learning - COT, ReAct, DSP
+
+
+Hallucination(https://www.youtube.com/watch?v=cfqtFvWOfg0&ab_channel=IBMTechnology) -
+
+What is hallucinating - 
+- Sentence Contradiction - when it contradicts previous response sentences like - sky is blue today, sky is green today
+- Prompt Contradiction - when it contradicts to the prompt used to generate it
+- Factual Contradiction - when it predicts incorrect facts
+- Non-sensical - when it predicts non-sense data like: Paris is capital of France, Paris is a famous singer  
