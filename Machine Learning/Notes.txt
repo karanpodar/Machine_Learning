@@ -256,4 +256,5 @@ What is hallucinating -
 - Sentence Contradiction - when it contradicts previous response sentences like - sky is blue today, sky is green today
 - Prompt Contradiction - when it contradicts to the prompt used to generate it
 - Factual Contradiction - when it predicts incorrect facts
-- Non-sensical - when it predicts non-sense data like: Paris is capital of France, Paris is a famous singer  
+- Non-sensical - when it predicts non-sense data like: Paris is capital of France, Paris is a famous singer
+
