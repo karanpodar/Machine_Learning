@@ -228,7 +228,10 @@ Activation Functions - Curved or bent lines are called activation functions
 Different types of activation functions - 
 1. Soft Plus - in which we use curved lines
 2. ReLU (Rectified Linear Unit) - usually a bent line
-3. Sigmoid - s shaped curved line  
+3. Sigmoid - s shaped curved line where value between 0 and 1
+4. Softmax
+5. Tanh - similar to sigmoid but value lies between -1 to 1
+6. Linear
 
 Hidden layers - Nodes in the middle of input & output nodes are called hidden layers
 Usually Hit n trial methods is used to confirm the number of hidden layers
@@ -236,9 +239,32 @@ Usually Hit n trial methods is used to confirm the number of hidden layers
 Weights - the parameters we multiply in hidden layers are Weights
 Biases - the parameters we add in hidden layers are Biases
 
+Loss Function -
+
+the Loss function is a method of evaluating how well your algorithm is modeling your dataset. It is a mathematical function of the parameters of the machine learning algorithm.
+
+Different loss functions for Regression-
+1. MSE (Mean Squared Error/Squared loss/ L2 loss) - disadvantage is - it doesnt handle outliers since we are squaring
+2. MAE (Mean Absolute Error/ L1 loss Functions) - disadvantage is - Gradient descent cannot be applied directly as graph is not differentiable 
+3. Huber loss - Apply MSE when the actual and prediced value is less than a parameter(Delta) else apply MAE
+
+Different loss functions for Classification-
+1. Binary Cross Entropy/log loss Functions in machine learning models
+2. Categorical Cross Entropy
 
 
+When to use which Loss & Activation function -
 
+Always use RelU in hidden layers
+
+For Classification -
+1. Binary Classification - output layer use sigmoid and loss function Binary Cross Entropy
+2. MultiClass Classification - output layer use softmax and loss function Categorical Cross Entropy
+When to use categorical cross-entropy and sparse categorical cross-entropy?
+If target column has One hot encode to classes like 0 0 1, 0 1 0, 1 0 0 then use categorical cross-entropy. and if the target column has Numerical encoding to classes like 1,2,3,4….n then use sparse categorical cross-entropy.
+
+For Regression -
+output layer use linear and loss function can be MSE, MAE, Huber loss
 
 Prompt engineering - (https://medium.com/@bryan.mckenney/teaching-llms-to-think-and-act-react-prompt-engineering-eef278555a2e)
 https://www.youtube.com/watch?v=1c9iyoVIwDs&ab_channel=IBMTechnology
@@ -258,3 +284,17 @@ What is hallucinating -
 - Factual Contradiction - when it predicts incorrect facts
 - Non-sensical - when it predicts non-sense data like: Paris is capital of France, Paris is a famous singer
 
+NLP -
+
+Encoders - usually are for NLU(Natural language Understanding)
+Decoders - usually are for NLG(Natural Language Generation)
+
+Each of these parts can be used independently, depending on the task:
+
+Encoder-only models: Good for tasks that require understanding of the input, such as sentence classification and named entity recognition.
+Decoder-only models: Good for generative tasks such as text generation.
+Encoder-decoder models or sequence-to-sequence models: Good for generative tasks that require an input, such as translation or summarization.
+
+Transformers have Flexibility: At their core, all models are simple PyTorch nn.Module or TensorFlow tf.keras.Model classes and can be handled like any other models in their respective machine learning (ML) frameworks.
+
+Logits - its the raw predicted data without applying any activation function like Softmax or Argmax
