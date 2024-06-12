@@ -1,3 +1,7 @@
+'''
+Mostly used when the feature is in normal distribution
+'''
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
