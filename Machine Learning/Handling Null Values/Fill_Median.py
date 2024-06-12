@@ -1,3 +1,7 @@
+"""
+Mostly used when the feature has right or left skewness
+"""
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
