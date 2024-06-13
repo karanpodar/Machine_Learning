@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv(r'Machine Learning\Encoding\Loan Prediction Dataset.csv')
+df = pd.read_csv(r'Machine Learning\Loan Prediction Dataset.csv')
 print(df.head())
 
 print(df.groupby('Education').size())
