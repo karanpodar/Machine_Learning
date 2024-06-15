@@ -1,3 +1,7 @@
+"""
+Mostly used for categorical data
+"""
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
