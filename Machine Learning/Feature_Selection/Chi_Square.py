@@ -9,7 +9,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_selection import chi2
 import numpy as np
 
-df = pd.read_csv(r'Machine Learning\Feature_Selection\Loan Prediction Dataset.csv')
+df = pd.read_csv(r'Machine Learning\Loan Prediction Dataset.csv')
 df = df[['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Credit_History', 'Property_Area', 'Loan_Status']]
 
 # fill null values
