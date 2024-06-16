@@ -102,10 +102,12 @@ If a node has more impurity than existing we can ignore that node to avoid overf
 -- Missing data - 1. We can take Mean/Median in case of continous values or Mode in case of non-continous
 2. we can find another column with highest correlation and predict using linear regression in case of continous values or in case of non linear select values from corresponding column 
 
+In case of smaller dataset use Entropy or else use Gini impurity since there is log in entropy it is slower
+
 Regression Tree -
 - Take 2 points in graph and calculate their Squared residuals by taking averages
 - Take sum of Squared residuals(SSR) for all points and plot a graph (Similar to Elbow plot in K-means)
-- Value with least Sum of Squared residuals will be root, then split the points on the left and right and do the hole process again to find internal nodes until leaf nodes
+- Value with least Sum of Squared residuals will be root, then split the points on the left and right and do the whole process again to find internal nodes until leaf nodes
 - We can have minimum number of points to allow for splits, to avoid overfitting (Usually 20) - which means if a node has less than 20 points we will not split it
 In case of multiple columns we find the lowest SSR and make that as the root and follow same process like above.
 
