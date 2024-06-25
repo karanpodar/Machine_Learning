@@ -6,6 +6,6 @@ iter_a = iter(a)
 # print(dir(iter_a))
 
 print(list(iter_a))
-
+print(type(iter_a))
 for i in iter_a:
     print(i)
