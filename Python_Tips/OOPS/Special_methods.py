@@ -30,8 +30,10 @@ class Employee:
 emp_1 = Employee('Corey', 'Schafer', 50000)
 emp_2 = Employee('Test', 'Employee', 60000)
 
-print(emp_1)    # First it will check __str__ if it present it will return the value else it will check __repr__
+# print(emp_1)    # First it will check __str__ if it present it will return the value else it will check __repr__
 
-print(emp_1 + emp_2)
+print(type(repr(emp_1)))
 
-print(len(emp_1))
+# print(emp_1 + emp_2)
+
+# print(len(emp_1))
