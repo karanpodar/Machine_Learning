@@ -73,6 +73,7 @@ Elbow plot helps us in figuring out the most efficient number of clusters
 -- Centroid based - in which new point is predicted based on the distance from Centroid
 -- Single linkage - in which new point is predicted based on the distance from Closet point in the cluster
 -- Complete linkage - in which new point is predicted based on the distance from farthest point in the cluster
+-- Average linkage - in which new point is predicted based on the average distance of all the points
 
 Hierarchical clustering -
 We find similarity(mostly using Euclidean distance) between 2 rows and map it together and keep doing that until all rows are clustered
@@ -152,6 +153,12 @@ Then we find the prior probability
 To Predict any value we take each probabilities and add their log values(to avoid underflow) and see which is higher
 --Underflow - when any value is very close to 0 
 --Prior probability - the initial probability based on taining data is called prior probability
+
+Regularisation -
+To add some amount of penalty
+Ridge Regression - in this the penalty is added based on the a lambda value multiplied by Sqaure of slope
+Lasso Regression - in this the penalty is added based on the a lambda value multiplied by Absolute of slope
+Elastic Regression - it is combination of Ridge & Lasso you add (Lambda1 + Absolute of each variable) + (Lambda2 + Square of each variable)
 
 Dimension Reduction-
 PCA -
