@@ -52,6 +52,8 @@ when matrix is NxN
 -- specificity(1) = True negative(1) / (True negative(1) + False Positive(1) + .. + False Positive(N))
 -- specificity(2) = True negative(2) / (True negative(2) + False Positive(1) + .. + False Positive(N)).......
 
+T-Test & Annova uses Design Matrics to eliminate the residuals
+
 Linear Regression - (coefficient = slope, constant = intercept)
 Bias - the inability to capture the true relationship 
 Variance - the difference in the prediction of the model when using different datasets 
@@ -129,6 +131,11 @@ Gradient Boost - Regression
 2. Create & add a tree with taking residuals as reference and using some learning rate(between 0 & 1)
 3. Keep adding trees taking new residuals into conisderation based on errors made by previous tree
 
+XGBoost -
+Uses similarity scores to calculate the residuals
+similarity score = (Sum of the Sqaure of residuals)/(Number of points + Lambda)
+then we find the gain by = similarity score of left + right - root
+More the similarity score better the algorithm
 
 SVM & SVC-
 Margin - Distance between hyperplane and nearest point is called margin
