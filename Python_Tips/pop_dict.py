@@ -5,5 +5,4 @@ car = {
 }
 
 car.pop("model")
-
 print(car)
