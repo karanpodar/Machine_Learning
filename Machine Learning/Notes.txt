@@ -8,6 +8,7 @@ Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture, DBScan
 Dimensionality Reduce - PCA (Principal Component Analysis), SVD (Singular Value Decomposition)
 
 
+
 p-value -
 The p-value only tells you how likely the data you have observed is to have occurred under the null hypothesis. 
 If the p-value is below your threshold of significance (typically p < 0.05), then you can reject the null hypothesis, 
