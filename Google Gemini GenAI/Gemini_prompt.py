@@ -2,7 +2,6 @@
 # to set GOOGLE_API_KEY as env variable you need to update the details in system variables
 
 import os
-
 import google.generativeai as genai
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
