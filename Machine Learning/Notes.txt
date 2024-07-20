@@ -7,8 +7,6 @@ Regression - Linear regression
 Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture, DBScan
 Dimensionality Reduce - PCA (Principal Component Analysis), SVD (Singular Value Decomposition)
 
-
-
 p-value -
 The p-value only tells you how likely the data you have observed is to have occurred under the null hypothesis. 
 If the p-value is below your threshold of significance (typically p < 0.05), then you can reject the null hypothesis, 
@@ -85,7 +83,7 @@ Height of the dendogram tells us the similarity between 2 cluster, smaller Heigh
 
 DBScan (Density based scan)- 
 - we take all points randomly and create a circle of some radius around each point and see how many points it overlaps
-- we fix a value of overlapping points like 4 in our case and all the points which overall 4 points are called as Core points and remaining are non core points
+- we fix a value of overlapping points like 4 in our case and all the points which cover overall 4 points are called as Core points and remaining are non core points
 - we take 1 core point and all the other core points overlapping that point is added to the cluster
 - Once all the core points are added to clusters, we check if any non core point overlaps core point
 - if yes we add it to the cluster, if not we dont add it to cluster
@@ -137,7 +135,8 @@ XGBoost -
 Uses similarity scores to calculate the residuals
 similarity score = (Sum of the Sqaure of residuals)/(Number of points + Lambda)
 then we find the gain by = similarity score of left + right - root
-More the similarity score better the algorithm
+More the similarity score better the tree
+we prune based on the gain - gamma(a user defined tree complexity parameter) - if positive then dont prune
 
 SVM & SVC-
 Margin - Distance between hyperplane and nearest point is called margin
