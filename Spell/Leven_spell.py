@@ -82,15 +82,11 @@ symsp.load_dictionary(r'C:\Users\KARAN\Desktop\Python\VsCode_py\python_learn\Spe
 
 
 # Word Segmentation
-test = symsp.word_segmentation(text)
+# test = symsp.word_segmentation(text)
 # print(test)
 
 # Loading dictionary keys
 comp = symsp.words.keys()
-# print(comp)
-
-# Sentence tokenising the input string
-# sent_token = sent_tokenize(test.corrected_string)
 
 # Word tokenising the input string
 #tokenized_words = word_tokenize(test.corrected_string) 
@@ -100,14 +96,10 @@ tokenized_words = word_tokenize(text)
 Cand = Levencandidates()                  
 pred = {}
 
-# print(Cand.check_pos(sent_token))
-
-
 for x in tokenized_words:
-    # input.append(x) 
     Test = Cand.candidate(x, comp)
-    print(Test)
-    # pred[x] = Test.keys()           
-   # print(f'For input {x} the best candidates are: {Test}')
+    #print(Test)
+    pred[x] = Test.keys()           
+    print(f'For input {x} the best candidates are: {Test}')
 
 print(pred)
