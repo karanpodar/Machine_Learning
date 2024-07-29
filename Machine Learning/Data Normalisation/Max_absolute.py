@@ -1,5 +1,6 @@
 """
-Data Normalisation is done for datasets which have huge differences in the values, like few values are in 100s and few in 10,000s
+Data Normalisation is done for datasets which have huge differences in the values,
+like few values are in 100s and few in 10,000s
 """
 
 import pandas as pd
