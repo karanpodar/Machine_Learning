@@ -1,0 +1,7 @@
+Commands to check the donloaded hugging face models-
+
+pip install huggingface_hub[cli]
+
+to show all the downloaded models - huggingface-cli scan-cache
+
+to select and delete models - huggingface-cli delete-cache 
