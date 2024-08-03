@@ -1,0 +1,50 @@
+Karan Poddar
+karanpodar@gmail.com
++91 9176204117
+github.com/karanpodar
+
+
+Summary
+
+Diligent and goal-driven IT Professional with over 5 years of experience in Mainframe Development, API Automation Testing, and Environment Engineering, currently serving as a Machine Learning Engineer at Barclays.
+Demonstrated expertise in designing and implementing complex machine learning models and systems, coupled with a strong background in the Property Insurance and Banking domains.
+Proven ability to deliver significant business value through innovative solutions, excellent analytical skills, and a commitment to continuous learning and improvement.
+
+
+Skills Summary
+Domain	Insurance, Banking (Unsecured Lending – Credit Cards, Loans)
+Programming Languages	COBOL, JCL, CICS, SQL, REXX, Karate (Framework), Python
+Tools /DB/Packages
+/ Framework / ERP Components	
+Mainframe (Cobol, JCL, DB2, Endevor, BMC Catalog Manager, VSAM, TSO, IBM File-manager, Excalibur, IBM File-Aid, CA-File Manager, ISPF, MQ Manager, DB2, CICS Debugger), Automation (Karate, Gherkin, Selenium, Groovy), AWS Cloud Services (Elastic Container Service, CloudWatch, S3, Boto3, Bedrock, Sagemaker), Python, Machine Learning/ Artificial Intelligence (Predictive Modelling, SQL, Data Visualization, Exploratory Data Analysis, Artificial Intelligence, NLP, Feature Selection, Packages like Streamlit, Pandas, Numpy, scikit-learn, Regression and Classification Algorithms, Transformers, Prompt Engineering).
+
+
+ 
+
+
+WORK EXPERIENCE
+Barclays (Machine Learning Engineer)	April 2023 – Present
+Designed and developed a Contextual Search Engine leveraging NLP, Text Similarity, and Semantic Search, improving search efficiency by 30%.
+Developed a Generative AI-based Complaints Workflow Management System utilizing NLU, text summarization, and multiclass text classification, reducing complaint resolution time by 40%.
+Created a Loan Repayment Prognosticator proof of concept using a supervised learning algorithm to prevent bank from disbursing loans to default-prone customers or refactoring affordability with high repayment risks.
+Leveraged Python and Machine Learning to implement optimization techniques, reducing model over-fitting by 20% and increasing model accuracy and practicality.
+Developed an Internal Full Stack Web Application with Python functions and Streamlit to compare Deployment configurations, saving around 0.2 FTE per resource.
+Developed a Jenkins Pipeline to generate Bit bucket commit and PR reports, to have a track of commits and Pull Requests based on different criteria’s.
+
+Barclays (Environment DevOps Engineer - Mainframes & AWS)	Jan 2023 – Mar 2023
+Developed detailed technical documentation to facilitate knowledge sharing among team members and aid in future troubleshooting efforts. 
+Maintained 44 Mainframe regions and 9 AWS slots to provide end customers with technical support, taking care of issues quickly and efficiently.
+Enhanced collaboration between Test teams by standardizing communication protocols around system requirements, project progress updates, and change management processes.
+Deployment and management of code, integrated services and maintain code versions for all accepted demand. Using Endeavor, code movement activities, handover and package creation, Jenkins CI/CD process, and coordinating with Development Teams.
+Barclays (API Automation Tester)	May 2022 – Dec 2022
+Accessibility & Vulnerability Markers –Adapt and improve the current Eligibility Markers, and add a new Accessibility Marker (Differently-abled Customer) for Letter Delivery.
+Ogone Replacement – Add new Oracle DB call to existing Billing Enquiry API and remediate the existing flow.
+CRD4 Score Replacement – Replacing the existing customer scoring system with a new enhanced PD4M & Capital PD Scoring system, as a part of regulatory & compliance change.
+OMS Remediation – Remediation of existing offer management system to fix the flaws and optimize performance issues.
+Produced over 1065 repeatable automated test cases, saving almost two FTEs in total.
+LTI (Mainframe Developer)	May 2019 – May 2022
+Exhibited an unwavering record of success in fixing 21 Production Known Errors (PKEs), which resulted in a notable drop in the volume of customer complaints.
+Delivered the California Fire-line Score fifteen days ahead of schedule. This was a significant regulatory project, and any problems or delays would have resulted in fines for the company amounting to millions of dollars.
+Worked on migrating the Property Insurance policies from Quantum Homes to Quantum Homes 2.0, which was the client's major deliverable and the most competitive offering in the market. Following deployments in a few states, the number of newly issued policies increased by over 43%.
+Designed and developed a brand-new system known as Reason For Change (RFC) codes, which was developed to send a change code to customers anytime they modify their policy.
+
