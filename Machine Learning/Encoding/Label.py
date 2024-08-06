@@ -1,3 +1,10 @@
+'''
+In this we set the label for values in the same column
+
+For Ex - if we have 3 colors red, blue, green
+We will set red as 0, blue as 1 and green as 2 in the same column
+'''
+
 import seaborn as sns
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
