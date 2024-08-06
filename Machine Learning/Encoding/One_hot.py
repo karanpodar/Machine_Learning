@@ -1,3 +1,10 @@
+'''
+we convert each values to 1 and rest as 0
+
+For ex - if we have 2 colors -red, green, yellow
+We will have 1 column for each color and we will set the value as 1 in their respective column
+'''
+
 import seaborn as sns
 import numpy as np
 import pandas as pd
