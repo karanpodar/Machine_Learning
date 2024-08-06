@@ -1,3 +1,7 @@
+'''
+Based on the target value we encode the column
+'''
+
 from category_encoders import TargetEncoder
 import pandas as pd
 
