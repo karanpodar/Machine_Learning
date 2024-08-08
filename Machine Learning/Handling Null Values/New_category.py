@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv(r'Machine Learning\Encoding\Loan Prediction Dataset.csv')
+df = pd.read_csv(r'C:\Users\KARAN\Desktop\Python\VsCode_py\python_learn\Machine Learning\Loan Prediction Dataset.csv')
 print(df.head())
 
 # check null values
