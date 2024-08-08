@@ -41,6 +41,8 @@ Each stump is made by taking previous stump's mistakes
 Learning rate is used to control loss function for calculating the weight of base model.
 
 Descision matrix - 
+False Positive - Type 1 error
+False negative - Type 2 error
 when matrix is 2x2
 -- sensitivity = True Positive / (True Positive + False negative)
 -- specificity = True negative / (True negative + False Positive)
@@ -105,7 +107,7 @@ If a node has more impurity than existing we can ignore that node to avoid overf
 -- Missing data - 1. We can take Mean/Median in case of continous values or Mode in case of non-continous
 2. we can find another column with highest correlation and predict using linear regression in case of continous values or in case of non linear select values from corresponding column 
 
-In case of smaller dataset use Entropy or else use Gini impurity since there is log in entropy it is slower
+In case of smaller dataset use Entropy or else in other cases use Gini impurity since there is log in entropy it is slower
 
 Regression Tree -
 - Take 2 points in graph and calculate their Squared residuals by taking averages
@@ -131,6 +133,14 @@ Gradient Boost - Regression
 2. Create & add a tree with taking residuals as reference and using some learning rate(between 0 & 1)
 3. Keep adding trees taking new residuals into conisderation based on errors made by previous tree
 
+Gradient Boost - Classification
+1. It is similar to regression but has some differences
+2. Here we use Logistic function to find the residuals
+    e^log(odds) / (1 + e^log(odds))
+3. Then we build a tree and have all the values in the leaf
+4. While predicting we use this formula instead of averaging all the values in the leaf-
+    Sum of Residual / [Sum of ( Previous probability * (1-previous probability) )]
+
 XGBoost -
 Uses similarity scores to calculate the residuals
 similarity score = (Sum of the Sqaure of residuals)/(Number of points + Lambda)
@@ -147,7 +157,7 @@ We need to have the maximum distance between the 2 support vectors (Maximal marg
 Soft margins - when we allow misclassifications, distance between observations and the threshold is called soft margin
 SVC (Support vector classifier) - when we use normal dataset(unmodified dataset) to classify the data using plane
 SVM (Support vector Machine) - when we use kernel functions to sysematically find SVC
-Kernel trick - The kernel function doesnt transform the data in higher dimesnions, rather it just does teh calculation
+Kernel trick - The kernel function doesnt transform the data in higher dimesnions, rather it just does the calculation
 Radial Basis function SVM (RBF SVM) - plots data in infinite dimensions and works as weighted nearest neighbour model (it is preferred when the data is linearly non separable)
 
 Naive Bayes - 
@@ -164,20 +174,22 @@ To Predict any value we take each probabilities and add their log values(to avoi
 
 Regularisation -
 To add some amount of penalty
-Ridge Regression - in this the penalty is added based on the a lambda value multiplied by Sqaure of slope
-Lasso Regression - in this the penalty is added based on the a lambda value multiplied by Absolute of slope
-Elastic Regression - it is combination of Ridge & Lasso you add (Lambda1 + Absolute of each variable) + (Lambda2 + Square of each variable)
+Ridge Regression(L2) - in this the penalty is added based on the a lambda value multiplied by Sqaure of slope
+Lasso Regression(L1) - in this the penalty is added based on the a lambda value multiplied by Absolute of slope
+Elastic Regression(L3) - it is combination of Ridge & Lasso you add (Lambda1 + Absolute of each variable) + (Lambda2 + Square of each variable)
 
 Dimension Reduction-
 PCA -
 PCA reduces dimensions based on the most variations 
 
-LDA -
+LDA Linear discriminant analysis-
 LDA is used for maximising the seperatibility between multiple categories, like PCA it creates a axis which maximises the seperatibility
 LDA categories - 1. 'Maximise' the distance between means  2. 'Minimise' variation (represented as scatter)
 
-MDS - 
-MDS(Multi-dimensional Scaling) - has 2 types metric/Classical(Also called as PCoA - Principal Coordinate Analysis) and Non-metric
+MDS(Multi-dimensional Scaling) - 
+is of 2 types - 
+1. metric/Classical(Also called as PCoA - Principal Coordinate Analysis)
+2. Non-metric
 PCoA reduces dimensions based on the distance between 2 or more columns rest eveything is similar to PCA
 There are multiple ways to find distance between 2 columns like Euclidean distance, log fold distance, Manhattann, Hamming
 
@@ -286,8 +298,18 @@ output layer use linear and loss function can be MSE, MAE, Huber loss
 Prompt engineering - (https://medium.com/@bryan.mckenney/teaching-llms-to-think-and-act-react-prompt-engineering-eef278555a2e)
 https://www.youtube.com/watch?v=1c9iyoVIwDs&ab_channel=IBMTechnology
 - RAG(Retireval Augmented Generator) (Improve domain knowledge) - usually adding a retierver which gets data from a set of data or database (Used to overcome Incorrect, Outdated information and adding source to the content)
+
 - COT(Chain of thought) (to get precise output) - to break down the prompt/steps and get more precise answer and improvise the result. Promoting ideas using 'thoughts'  in the form of chunks one by one to obtain actual answers. Language models arrive at your desired answers through reasoning and logic.
-- ReAct(Thought, Action, and Observation) - Different from the chain of thoughts, this involves both private knowledge base (db) and public language model (llm) data. If information isn't in the knowledge base, it goes back to the public llm data (trained data) for results.
+
+- ReAct(Thought, Action, and Observation) - 
+For example - 'Who is onwer of Reliance and which of his son got married recently'
+
+In this we first get the thought - Who is onwer of Reliance
+Then we do action - Search Reliance onwer
+For which we get a observation - Reliance owner is Mukesh Ambani
+Then again we process the remaining prompt with similar approach 
+Different from the chain of thoughts, this involves both private knowledge base (db) and public language model (llm) data. If information isn't in the knowledge base, it goes back to the public llm data (trained data) for results.
+
 - DSP(Direct Stimulus Prompting)- The latest method involves hinting the prompt with a specific hint to get the answers.
 
 Few-shot learning - COT, ReAct, DSP
