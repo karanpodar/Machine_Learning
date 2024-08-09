@@ -12,5 +12,5 @@ print(lemma)
 
 # lemmatizing using POS
 
-lemma1 = lemmatizer.lemmatize('better', pos='a')  # loest form of adjective
+lemma1 = lemmatizer.lemmatize('better', pos='a')  # lowest form of adjective
 print(lemma1)
