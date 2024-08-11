@@ -40,7 +40,7 @@ Usually in Random forest each tree is equally worthy of other trees, but in ADAB
 Each stump is made by taking previous stump's mistakes
 Learning rate is used to control loss function for calculating the weight of base model.
 
-Descision matrix - 
+confusion matrix - 
 False Positive - Type 1 error
 False negative - Type 2 error
 when matrix is 2x2
@@ -71,6 +71,14 @@ p-value in linear regression tells if the coefficient is near to 0 or not
 p-value is 2 if there are 2 parameters(X, Y), it will be 1 if there is only parameter(y) so on and so forth 
 coefficient tells the direction of line. If positive the line starts at 0 to infinity, if negative it starts from high and then decline, if 0 it is straigth line parallel to x axis 
 coefficient could be compared as angle 
+
+Assumptions in linear regression
+Linearity: The relationship between the dependent and independent variables is linear.
+Independence: The observations are independent of each other.
+Homoscedasticity: The variance of the errors is constant across all levels of the independent variables.
+Normality: The errors follow a normal distribution.
+No multicollinearity: The independent variables are not highly correlated with each other.
+No endogeneity: There is no relationship between the errors and the independent variables.
 
 K-means clustering -
 Elbow plot helps us in figuring out the most efficient number of clusters
@@ -144,6 +152,7 @@ Gradient Boost - Classification
 XGBoost -
 Uses similarity scores to calculate the residuals
 similarity score = (Sum of the Sqaure of residuals)/(Number of points + Lambda)
+Lambda - penalty value
 then we find the gain by = similarity score of left + right - root
 More the similarity score better the tree
 we prune based on the gain - gamma(a user defined tree complexity parameter) - if positive then dont prune
@@ -207,6 +216,7 @@ Also t-SNE moves only 1 point in each iteration whereas UMAP moves more than 1 p
 
 For all algo -
 ROC - Reciever Operator Characteristic graph provide a simple way to summarize multiple Descision matrix info
+It is a plot between True Positive on y axis and False positive on x axis
 AUC - Area under the curve 
 If AUC of 1 algo covers more area than the AUC of another then that algo is better
 Surpise - Suprise is inverse of log of probability 
@@ -222,6 +232,7 @@ Bias - the inability to capture the true relationship
 Variance - the difference in the prediction of the model when using different datasets
 Data Leakage - it happens when the training data contains information about the target
 Central limit Theorem - No matter whichever distribution we start with their means will be a normal distribution.
+Data drift -drift in data like we train the model from data points during covid but over period it looses accuracy as a result of data drift
 
 Bias -
 The bias is known as the difference between the prediction of the values by the Machine Learning model and the correct value. 
@@ -389,6 +400,17 @@ Encoder-decoder models or sequence-to-sequence models: Good for generative tasks
 Transformers have Flexibility: At their core, all models are simple PyTorch nn.Module or TensorFlow tf.keras.Model classes and can be handled like any other models in their respective machine learning (ML) frameworks.
 
 Logits - its the raw predicted data without applying any activation function like Softmax or Argmax
+
+
+
+A/B Testing - 
+
+Use canary deployments to drive the loads on model A and B.
+For example - 10 % of load should be Model B and remaining on model A which is our existing model
+
+Use sticky sessions to make sure the once a user lands on model B he/she should land on Model always.
+
+
 
 
 AWS LEX (https://www.youtube.com/watch?v=RB8yw2nzA2Q&list=PLAMHV77MSKJ7s4jE7F_k_Od8qZlFGf1BY) -
