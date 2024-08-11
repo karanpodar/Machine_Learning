@@ -1,1 +1,2 @@
-Basically Linters are nothing but extensions/ packages, which check for any errors in the code and make sure we follow the PEP8 guideline
+Basically Linters are nothing but extensions/ packages,
+which check for any errors in the code and make sure we follow the PEP8 guideline
