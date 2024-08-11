@@ -1,5 +1,6 @@
 """
 Manhattan distance is nothing but the distance of Sum of the differences of the values
+or a metric used to determine the distance between two points in a grid-like path
 """
 
 from math import sqrt
