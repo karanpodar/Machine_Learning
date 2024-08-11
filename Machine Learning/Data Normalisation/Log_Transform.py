@@ -16,7 +16,7 @@ print(df.describe())
 sns.histplot(df['total sulfur dioxide'])
 plt.show()
 
-# Log transformation = (value - min) / (max - min)
+# Log transformation = log(value+1) 
 
 df_temp = df.copy()
 df_temp['total sulfur dioxide'] = np.log(df_temp['total sulfur dioxide']+1)  # if there is a 0 it will throw errors as log(0) = infinite, thats why adding 1 to each value
