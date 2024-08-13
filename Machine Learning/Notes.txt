@@ -402,6 +402,96 @@ Transformers have Flexibility: At their core, all models are simple PyTorch nn.M
 Logits - its the raw predicted data without applying any activation function like Softmax or Argmax
 
 
+Lexical(keyword) vs Semantic(vector similarity search) vs hybrid Search-
+https://superlinked.com/vectorhub/articles/optimizing-rag-with-hybrid-search-reranking
+
+But each of vector similarity search and keyword search has its own strengths and weaknesses.
+Vector similarity search is good, for example, at dealing with queries that contain typos, 
+which usually don’t change the overall intent of the sentence. However, vector similarity search 
+is not as good at precise matching on keywords, abbreviations, and names, which can get lost in 
+vector embeddings along with the surrounding words. Here, keyword search performs better.
+
+That being said, keyword search is not as good as vector similarity search at 
+fetching relevant results based on semantic relationships or meaning, which are 
+only available via word embeddings. For example, a keyword search will relate the words 
+“the river bank” and “the Bank of America” even though there is no actual semantic connection
+between the terms - a difference to which vector similarity search is sensitive. 
+Keyword search would, therefore, benefit from vector search, but the prevailing approach 
+is not to combine them but rather to implement them separately using distinct methodologies.
+
+In hybrid search - a keyword-sensitive semantic search approach,
+we combine vector search and keyword search algorithms to 
+**take advantage of their respective strengths while mitigating their respective limitations.
+
+Vector similarity search proves to be inadequate in certain scenarios, including:
+
+Matching abbreviations like GAN or LLaMA in the query and knowledge base.
+Identifying exact words of names or objects, like “Biden” or “Salvador Dali".
+Identifying exact code snippets in programming languages. 
+(Taking a similarity search approach in such instances is practically useless.)
+In such instances, hybrid search is extremely useful. Keyword search guarantees
+that abbreviations, annotations, names, and code stay on the radar,
+while vector search ensures that search results are contextually relevant.
+
+Limitations -
+
+Latency: Hybrid search involves performing two search algorithms, so it may be 
+slower than a semantic search when executing on a large knowledge corpus.
+Computational Expense: Developing and customizing models for hybrid search can be 
+computationally expensive.
+It's best to consider hybrid search only if your system requires keyword-backed results.
+Native Support in Databases: Not all vector databases support hybrid search. 
+You need to ensure the vector database you choose does.
+
+
+Agentic AI -
+
+Agentic AI refers to a class of artificial intelligence systems designed to act as 
+autonomous agents, capable of performing tasks, making decisions, and interacting with 
+their environments without requiring direct human intervention. 
+Unlike traditional AI models that follow predefined rules or Generative AI that 
+focuses on creating new content, 
+Agentic AI emphasizes goal-oriented behavior and adaptive decision-making.
+
+Limitations of RAG - (Need of agentic ai)
+https://www.youtube.com/watch?v=aQ4yQXeB1Ss
+https://www.youtube.com/watch?v=sal78ACtGTc
+
+- summarization - as top_k fails
+- comparison 
+- structured analytics + semantic search - calling sql database and then doing a semantic search
+- multipart questions 
+
+RAG Agents - 
+
+Routing - having a router, for example in case of summarization we can call a different route
+
+Query planning(https://docs.llamaindex.ai/en/stable/examples/agent/openai_agent_query_plan/) - 
+breaking down the query into sub-queries and then collating every response 
+
+Tool Use - calling a tool like API, calendar, SQL DB....
+
+ReAct (https://medium.com/@govindarajpriyanthan/building-a-react-agent-using-the-openai-gpt-4o-model-1aeddd3334b2) - 
+similar to prompt engg but rather having multiple calls to LLMs 
+
+Dynamic Query Planning
+
+LLMCompiler/ Planning(https://docs.llamaindex.ai/en/stable/examples/agent/llm_compiler/) - 
+similar to use CoT prompting method to come to a conclusion 
+
+Reflection - 
+calling llm multiple times to make sure the response is apt. 
+Like taking small step in right direction  
+While writing essay or code we humans write and then proofread and modify, similarly asking llms
+to have multiple calls and come to a better response
+Maybe have 2 LLMs one is a Coder Agent (actual agent) and Critic agent to just find flaws and have constructive criticism
+
+Multiagent Collab - 
+to have a llm play multiple roles like developer, tester, project manager....
+and to make it build a final repsonse or outcome
+Similar approach is done in Devin to have it build test and deploy a piece of code
+
+
 
 A/B Testing - 
 
