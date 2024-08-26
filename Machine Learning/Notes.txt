@@ -7,6 +7,30 @@ Regression - Linear regression
 Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture, DBScan
 Dimensionality Reduce - PCA (Principal Component Analysis), SVD (Singular Value Decomposition)
 
+Outlier Detection-
+Statistical method - Z-score, interquartile
+Distance based - Euclidean distance, KNN
+ML Algo - DBScan, 1 class SVM
+
+Anomaly Detection-
+Statistical - Z-score
+Distance - KNN
+ML Algo - DBscan, 1 class SVM
+
+Handling Null values-
+Drop rows or columns
+Imputation - filling mean/median/mode, interpolation in pandas(Time series)
+ML Algo - KNN, Random Forest, Decision Trees, Regularisation in linear
+Flag - fixed values like 0 or 99.... 
+
+Optimizing overfitting
+Cross Validation - k-fold, stratified k-fold
+Regularisation - L1, L2, Elastic regularisation, 
+Model simplification - feature refining, dimension reduction, pruning in trees
+Early Stopping
+More data
+parameter tuning
+
 p-value -
 The p-value only tells you how likely the data you have observed is to have occurred under the null hypothesis. 
 If the p-value is below your threshold of significance (typically p < 0.05), then you can reject the null hypothesis, 
@@ -306,9 +330,20 @@ If target column has One hot encode to classes like 0 0 1, 0 1 0, 1 0 0 then use
 For Regression -
 output layer use linear and loss function can be MSE, MAE, Huber loss
 
+Context Aware Models-
+
+Models generate word embeddings that change depending on the context in which the word is used.
+Ex - BERT, ELMO
+
+Models which generate static embeddings irrespective of context are called non context Aware
+ex - Glove, Word2Vec 
 
 
 Attention -
+The attention mechanism is a concept in machine learning, particularly in the field of deep learning, 
+that enables models to focus on specific parts of the input when making predictions or decisions. 
+It's like having the ability to selectively concentrate on certain aspects of the data, 
+rather than processing all the information equally.
 
 Soft attention - 
 allows models to focus on different parts of the input with varying degrees of emphasis, but smoothly and without making hard decisions
