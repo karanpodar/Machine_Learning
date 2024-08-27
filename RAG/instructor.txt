@@ -1,0 +1,2 @@
+instructor bedrock example - https://medium.com/@dminhk/unlocking-structured-outputs-with-amazon-bedrock-a-guide-to-leveraging-instructor-and-anthropic-abb76e4f6b20
+instructor - https://python.useinstructor.com/examples/moderation/#incorporating-openai-moderation-validator 
