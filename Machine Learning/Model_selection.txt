@@ -1,0 +1,10 @@
+1.Image Generation: Diffusion Models 2.Chatbot: LLMS (e.g., GPT-4)
+3.Image Recognition: YOLO
+4.Time Series Prediction: Prophet 5.0bject Detection: YOLO
+6.Speech Recognition: Transformer Models (e.g, Wav2Vec)
+7. Sentiment Analysis: ROBERTA
+8.Text Summarization: BART, T5 9.Anomaly Detection: Isolation Forest, Autoencoders
+10. Recommendation Systems: Matrix Factorization (e.g., ALS)
+11. Machine Translation: Transformer Models (e.g., MarianMT) 12.Text Classification: BERT 13.Clustering: DBSCAN
+14.Dimensionality Reduction: UMAP 15.Regression Analysis: Gradient Boosting Machines (e.g, xGBoost) 16.Classification: Random Forest 17.Speech Synthesis: WaveNet
+18. Natural Language Understanding (NLU): Transformer Models (e.g, GPT, BERT) 19.Style Transfer: Neural Style Transfer 20.Object Tracking: Siamese Networks
