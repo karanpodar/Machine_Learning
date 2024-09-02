@@ -1,3 +1,5 @@
+Interview questions - https://open.substack.com/pub/onlyoneoutlier/p/my-top-10-machine-learning-interview
+
 Supervised - Classification (For Binary values), Regression (For continous values)
 Unsupervised - Clustering, Dimensionality Reduce
 
