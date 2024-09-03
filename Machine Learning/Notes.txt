@@ -2,8 +2,12 @@ Interview questions - https://open.substack.com/pub/onlyoneoutlier/p/my-top-10-m
 
 1. 100-Days-Of-ML-Code - (https://Inkd.in/dcftdA57) - Stars: ~42k
 2. Awesome-datascience - (https://Inkd. in/dcFYYwx9) - Stars: ~22.7k
-3. Cracking the DS interview by James Le - (https://Inkd.in/geSVJmJR) - Stars: ~3k 4. Coding and ML System Design- (https:/Inkd.in/gXFaaaQR) - Stars: ~3.5k 5. Data-Science-For-Beginners - (https://Inkd. in/d_zZBadF)- Stars: ~14.5k 6. Data Science Interviews - (https://lInkd. in/gdRwnWeJ) - Stars: ~8.2k
-7. Data-science-ipython-notebooks- (https://Inkd. in/dPmQuPB9)- Stars: ~27.2k 8. RAG implementation- (https:/lInkd.in/dmwzFtN6)
+3. Cracking the DS interview by James Le - (https://Inkd.in/geSVJmJR) - Stars: ~3k 
+4. Coding and ML System Design- (https:/Inkd.in/gXFaaaQR) - Stars: ~3.5k 
+5. Data-Science-For-Beginners - (https://Inkd. in/d_zZBadF)- Stars: ~14.5k
+6. Data Science Interviews - (https://lInkd. in/gdRwnWeJ) - Stars: ~8.2k
+7. Data-science-ipython-notebooks- (https://Inkd. in/dPmQuPB9)- Stars: ~27.2k
+8. RAG implementation https://github.com/NirDiamant/RAG_Techniques/tree/main
 
 Supervised - Classification (For Binary values), Regression (For continous values)
 Unsupervised - Clustering, Dimensionality Reduce
