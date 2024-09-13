@@ -1,12 +1,12 @@
 Interview questions - https://open.substack.com/pub/onlyoneoutlier/p/my-top-10-machine-learning-interview
 
 1. 100-Days-Of-ML-Code - (https://Inkd.in/dcftdA57) - Stars: ~42k
-2. Awesome-datascience - (https://Inkd. in/dcFYYwx9) - Stars: ~22.7k
+2. Awesome-datascience - (https://Inkd.in/dcFYYwx9) - Stars: ~22.7k
 3. Cracking the DS interview by James Le - (https://Inkd.in/geSVJmJR) - Stars: ~3k 
 4. Coding and ML System Design- (https:/Inkd.in/gXFaaaQR) - Stars: ~3.5k 
-5. Data-Science-For-Beginners - (https://Inkd. in/d_zZBadF)- Stars: ~14.5k
-6. Data Science Interviews - (https://lInkd. in/gdRwnWeJ) - Stars: ~8.2k
-7. Data-science-ipython-notebooks- (https://Inkd. in/dPmQuPB9)- Stars: ~27.2k
+5. Data-Science-For-Beginners - (https://Inkd.in/d_zZBadF)- Stars: ~14.5k
+6. Data Science Interviews - (https://lInkd.in/gdRwnWeJ) - Stars: ~8.2k
+7. Data-science-ipython-notebooks- (https://Inkd.in/dPmQuPB9)- Stars: ~27.2k
 8. RAG implementation https://github.com/NirDiamant/RAG_Techniques/tree/main
 
 Supervised - Classification (For Binary values), Regression (For continous values)
@@ -114,6 +114,22 @@ Homoscedasticity: The variance of the errors is constant across all levels of th
 Normality: The errors follow a normal distribution.
 No multicollinearity: The independent variables are not highly correlated with each other.
 No endogeneity: There is no relationship between the errors and the independent variables.
+
+Dummy Variable Trap: 
+The Dummy variable trap is a scenario where there are attributes that are highly correlated 
+(Multicollinear) and one variable predicts the value of others. 
+When we use one-hot encoding for handling the categorical data, then one dummy variable (attribute)
+can be predicted with the help of other dummy variables. 
+Hence, one dummy variable is highly correlated with other dummy variables. 
+Using all dummy variables for regression models leads to a dummy variable trap. 
+So, the regression models should be designed to exclude one dummy variable. 
+
+For Example – 
+Let’s consider the case of gender having two values male (0 or 1) and female (1 or 0). 
+Including both the dummy variable can cause redundancy because if a person is not male
+in such case that person is a female, hence, we don’t need to use both the variables 
+in regression models. 
+This will protect us from the dummy variable trap.
 
 K-means clustering -
 Elbow plot helps us in figuring out the most efficient number of clusters
@@ -267,7 +283,9 @@ Bias - the inability to capture the true relationship
 Variance - the difference in the prediction of the model when using different datasets
 Data Leakage - it happens when the training data contains information about the target
 Central limit Theorem - No matter whichever distribution we start with their means will be a normal distribution.
-Data drift -drift in data like we train the model from data points during covid but over period it looses accuracy as a result of data drift
+Concept drift -drift in data like we train the model from data points during covid but over period it looses accuracy as a result of concept drift
+Data drift - when we train the model on data from pune but use the model in mumbai 
+
 
 Bias -
 The bias is known as the difference between the prediction of the values by the Machine Learning model and the correct value. 
@@ -623,3 +641,20 @@ While using write APIs we also send notification since something gets written/up
 Based on this we try to monitor the conversation and check the containment of the bot 
 
 Lex has confidence score at every response based on a threshold we can trigger the fallback(agent intervention)
+
+
+
+GenAI -
+
+Function calling - 
+Function calling is the ability to reliably connect LLMs to external tools to enable 
+effective tool usage and interaction with external APIs.
+
+Sliding window - 
+
+Context caching in Gemini -
+https://www.promptingguide.ai/applications/context-caching
+
+Prompt caching in Claude - 
+
+Vector DB based caching -
