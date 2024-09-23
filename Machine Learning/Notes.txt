@@ -1,4 +1,8 @@
 Interview questions - https://open.substack.com/pub/onlyoneoutlier/p/my-top-10-machine-learning-interview
+https://levelup.gitconnected.com/top-large-language-models-llms-interview-questions-answers-d7b83f94c4e
+https://levelup.gitconnected.com/machine-learning-interview-questions-answers-7265e34d07cc
+https://medium.com/geekculture/crack-the-machine-learning-coding-questions-ac8ecc2af90f
+https://levelup.gitconnected.com/deep-learning-interview-questions-answers-439163d3fc02
 
 1. 100-Days-Of-ML-Code - (https://Inkd.in/dcftdA57) - Stars: ~42k
 2. Awesome-datascience - (https://Inkd.in/dcFYYwx9) - Stars: ~22.7k
@@ -17,6 +21,17 @@ Regression - Linear regression
 
 Clustering - Kmeans, hierarchical, Density based, Gaussian Mixture, DBScan
 Dimensionality Reduce - PCA (Principal Component Analysis), SVD (Singular Value Decomposition)
+
+Missing Data: Imputation
+Outliers: Z-Score/IQR Technique
+Duplicate Data: De-duplication
+Inconsistent Data: Standardization
+Text Data: Text Normalization
+Categorical Data: One-Hot Encoding
+Date & Time: Date Parsing
+Mismatched Data: Regular Expressions (Regex)
+Scaling: Min-Max/Standard Scaling
+Data Validation: Assertion/Rule-based Checking
 
 Outlier Detection-
 Statistical method - Z-score, interquartile
@@ -41,6 +56,19 @@ Model simplification - feature refining, dimension reduction, pruning in trees
 Early Stopping
 More data
 parameter tuning
+
+Data normalization
+Normalization is the process of scaling and transforming data to a common scale. 
+It is used to ensure that all data is on the same scale, which makes it easier to compare and analyze.
+Log transformation - is used to transform data into a log scale.
+Max absolute scaling = value / max_value
+Min absolute scaling = value / min_value
+Min Max Scaling = (value - min) / (max - min)
+Max Min Scaling = (max - value) / (max - min)
+
+
+Text normalization
+Four main steps in text normalization are case normalization, tokenization and stop word removal, Parts-of-Speech (POS) tagging, and stemming
 
 p-value -
 The p-value only tells you how likely the data you have observed is to have occurred under the null hypothesis. 
