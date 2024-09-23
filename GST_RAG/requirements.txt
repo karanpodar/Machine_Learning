@@ -1,0 +1,5 @@
+sentence_transformers
+langchain
+faiss-cpu
+PyPDF2
+pdfplumber
