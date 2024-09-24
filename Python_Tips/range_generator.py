@@ -7,3 +7,5 @@ def my_range(start, stop):
 arr = my_range(10, 15)
 
 print(next(arr))
+print(next(arr))
+print(next(arr))
