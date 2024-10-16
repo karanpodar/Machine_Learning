@@ -1,4 +1,5 @@
 def arrayOfProducts(array):
+
     # Write your code here.
     left = [1 for i in range(len(array))]
     right = [1 for i in range(len(array))]
