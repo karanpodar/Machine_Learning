@@ -1,3 +1,4 @@
+
 def commonCharacters(strings):
 
     strings.sort(key=lambda a: len(a))
