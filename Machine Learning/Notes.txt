@@ -55,7 +55,7 @@ Regularisation - L1, L2, Elastic regularisation,
 Model simplification - feature refining, dimension reduction, pruning in trees
 Early Stopping
 More data
-parameter tuning
+parameter tuning (grid search CV, random search CV, bayesian optimization-best) 
 
 Data normalization
 Normalization is the process of scaling and transforming data to a common scale. 
