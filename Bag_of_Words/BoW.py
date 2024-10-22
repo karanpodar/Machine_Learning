@@ -3,6 +3,7 @@ import re
 import numpy as np 
 from nltk.tokenize import sent_tokenize, word_tokenize
 
+
 with open(r"Spell\utter.txt", "r") as file:
     fi = file.read()
 
