@@ -1,6 +1,7 @@
 from sklearn.feature_extraction.text import HashingVectorizer
 from nltk.tokenize import sent_tokenize, word_tokenize
 
+
 # create the transform
 vectorizer = HashingVectorizer(n_features=6)
 
