@@ -17,6 +17,7 @@ Difference from V1:
 1- More emphasis on Speed, because v1 was following track very rigidly
 """
 
+
 import math
 class Reward:
     def __init__(self, verbose = False, track_time = False):
