@@ -1,6 +1,7 @@
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.tokenize import sent_tokenize, word_tokenize
 
+
 # create the transform
 vectorizer = CountVectorizer()
 
