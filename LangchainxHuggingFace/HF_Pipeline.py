@@ -1,6 +1,7 @@
 from langchain_huggingface import HuggingFacePipeline
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
+
 model_id="gpt2"
 model=AutoModelForCausalLM.from_pretrained(model_id)
 tokenizer=AutoTokenizer.from_pretrained(model_id)
