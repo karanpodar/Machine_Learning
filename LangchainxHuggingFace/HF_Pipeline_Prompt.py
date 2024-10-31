@@ -2,6 +2,7 @@ from langchain_huggingface import HuggingFacePipeline
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 from langchain_core.prompts import PromptTemplate
 
+
 gpu_llm = HuggingFacePipeline.from_model_id(
     model_id="gpt2",
     task="text-generation",
