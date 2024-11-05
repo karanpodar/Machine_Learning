@@ -7,5 +7,6 @@ with open(r'Python_Tips\Python_linter.txt', 'r') as f:
     data = f.read(5)
     print(data)
 
+
     # tell function tells the current position of the cursor since we seeked 5 bytes and read 5 bytes tell will give an output of 10
     print(f.tell())
