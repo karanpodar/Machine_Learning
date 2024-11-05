@@ -11,6 +11,7 @@ square_input = square([1, 2, 3, 7])
 # print(next(square_input))
 # print(next(square_input))  # to print N values of the output
 
+
 # print(list(square_input))  # to print all the values in the list
 
 # to print all values of a generator using a for loop
