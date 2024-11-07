@@ -1,6 +1,5 @@
 # pip install google-generativeai
 # to set GOOGLE_API_KEY as env variable you need to update the details in system variables
-
 import os
 
 import google.generativeai as genai
