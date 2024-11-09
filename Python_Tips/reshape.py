@@ -1,5 +1,6 @@
 # Understanding reshape() function in numpy
 
+
 import numpy as np
 
 ''' Reshape(-1, 1)
