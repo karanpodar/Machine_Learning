@@ -1,6 +1,7 @@
 from groq import Groq
 import os
 
+
 # llama_model = "llama3-70b-8192"
 
 def groq_prompt(user_prompt: str, llama_model="llama-3.1-8b-instant"):
