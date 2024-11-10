@@ -1,5 +1,6 @@
 # Loan Calculator
 
+
 money_owed = float(input("How much money do you owe?\n"))
 apr = float(input("How much is Annual Percentage Rate?\n"))
 months = int(input("How many months you want to pay??\n"))
