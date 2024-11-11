@@ -2,6 +2,7 @@ import os
 from langchain_huggingface import HuggingFaceEndpoint
 # from langchain_community.llms import HuggingFaceEndpoint
 
+
 os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.getenv('HUGGINGFACEHUB')
 tok_id = os.environ['HUGGINGFACEHUB_API_TOKEN']
 
