@@ -23,7 +23,7 @@ def paraphrase(
         truncation=True,
         max_length=400
     ).input_ids
-    
+
     outputs = model.generate(
         input_ids, temperature=temperature, repetition_penalty=repetition_penalty,
         num_return_sequences=num_return_sequences, no_repeat_ngram_size=no_repeat_ngram_size,
