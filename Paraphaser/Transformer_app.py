@@ -8,7 +8,8 @@ def paraphrase_process(text):
     paraphrase_response = paraphrase(text, text_length)
     for i, paraphrases in enumerate(paraphrase_response, 1):
         st.write(f"{i}. {paraphrases}")
-    
+
+
 st.title("🦙💬 Alfred")
 st.caption("🚀 A Custom Paraphase Generator")
 
