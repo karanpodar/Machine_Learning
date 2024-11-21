@@ -1,4 +1,5 @@
 def optimalFreelancing(jobs):
+
     # Write your code here.
     out = [ '_' for _ in range(7) ] 
     profit = 0
