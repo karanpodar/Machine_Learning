@@ -8,6 +8,7 @@ from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
 from sqlalchemy import create_engine
 from langchain_groq import ChatGroq
 
+
 st.set_page_config(page_title="AI SQL Assistant", page_icon="🤖", layout="wide")
 
 st.title("🤖 AI SQL Assistant")
