@@ -1,4 +1,5 @@
 def getNthFib(n):
+
     # Write your code here.
     if n == 1:
         return 0
