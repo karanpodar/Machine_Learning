@@ -1,4 +1,6 @@
 def nodeDepths(root, depth = 0):
+
+
     # Write your code here.
     if root == None:
         return 0
