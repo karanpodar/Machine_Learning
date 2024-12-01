@@ -1,5 +1,6 @@
 def commonCharacters(strings):
 
+
     strings.sort(key=lambda a: len(a))
     visit = {a for a in strings[0]}
     out = list(visit)
