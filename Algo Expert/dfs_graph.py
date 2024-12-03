@@ -4,6 +4,7 @@
 # and methods to the class.
 class Node:
 
+
     def __init__(self, name):
         self.children = []
         self.name = name
