@@ -1,6 +1,7 @@
 def classPhotos(redShirtHeights, blueShirtHeights):
     # Write your code here.
     
+
     blueShirtHeights.sort(reverse=True)
     redShirtHeights.sort(reverse=True)
     if blueShirtHeights[0] > redShirtHeights[0]:
