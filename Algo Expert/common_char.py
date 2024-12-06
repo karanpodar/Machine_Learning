@@ -11,6 +11,5 @@ def commonCharacters(strings):
                 out.remove(j)
     return out
 
-
 strings =["ab&cdef!", "f!ed&cba", "a&bce!d", "ae&fb!cd", "efa&!dbc", "eff!&fff&fffffffbcda", "eeee!efff&fffbbbbbaaaaaccccdddd", "*******!***&****abdcef************", "*******!***&****a***********f*", "*******!***&****b***********c*"]
 print(commonCharacters(strings))
