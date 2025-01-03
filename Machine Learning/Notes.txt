@@ -674,6 +674,12 @@ Lex has confidence score at every response based on a threshold we can trigger t
 
 GenAI -
 
+Evaluation in RAG - 
+To evaluate a rag application we can use ground truth data for checking different parameters like faithfulness, f1 score, relevance etc. There are different methods like using cosine similarity or packages like ragchecker. 
+Apart from this if we want to check or evaluate the retrieval or the ranker or the embeddings generator we can use NDCG scores (normalized discounted cumulative gain) based on relevance and their position in ranked list. 
+
+
+
 Function calling - 
 Function calling is the ability to reliably connect LLMs to external tools to enable 
 effective tool usage and interaction with external APIs.
