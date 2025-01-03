@@ -675,7 +675,13 @@ Lex has confidence score at every response based on a threshold we can trigger t
 GenAI -
 
 Evaluation in RAG - 
-To evaluate a rag application we can use ground truth data for checking different parameters like faithfulness, f1 score, relevance etc. There are different methods like using cosine similarity or packages like ragchecker. 
+To evaluate a rag application we can use ground truth data for checking different parameters like faithfulness, f1 score, relevance etc. There are different methods like using cosine similarity or packages like ragchecker.
+Few uncommon metrics which can be calculated with deepeval:
+Toxicity - how much content in the response is toxic or harmful. 
+Bias - bias towards group of people or race
+Completeness/ relevancy - checks if the response generated has everything in the user and system prompt. 
+Faithfulness - checks whether the response remains true to the source information or ground truth. 
+
 Apart from this if we want to check or evaluate the retrieval or the ranker or the embeddings generator we can use NDCG scores (normalized discounted cumulative gain) based on relevance and their position in ranked list. 
 
 
