@@ -680,9 +680,39 @@ Few uncommon metrics which can be calculated with deepeval:
 Toxicity - how much content in the response is toxic or harmful. 
 Bias - bias towards group of people or race
 Completeness/ relevancy - checks if the response generated has everything in the user and system prompt. 
-Faithfulness - checks whether the response remains true to the source information or ground truth. 
+Faithfulness - checks whether the response remains true to the source information or ground truth.
+
+There is something called RAG Evaluation Triad- it has 3 evaluation metrics which are used for evaluation 
+Answer relevance - how much is the answer relevant to the query
+Context relevance - how much is the context relevant to the query
+Groundedness - is the response supported by context
 
 Apart from this if we want to check or evaluate the retrieval or the ranker or the embeddings generator we can use NDCG scores (normalized discounted cumulative gain) based on relevance and their position in ranked list. 
+
+
+
+Advance RAG techniques:
+
+Reranking 
+
+Hybrid retrieval 
+
+Multi step reasoning - breaking bigger complex problem into small simple ones and solving them
+
+Retrieval aware prompting - sending the retrieval data into the prompt
+
+Different chunking methods - late chunking, semantic chunking... 
+
+Contextual retrieval - contextual embeddings + contextual bm25 could also use rerankers
+
+Sentence window retrieval - 
+1. Identifying Relevant Sentences: Using embedding-based retrieval, the system locates sentences closely matching the query.
+2. Expanding Context with a Sentence Window: A predefined number of sentences before and after the relevant sentence are included to form a context window.
+3. Generating Responses: The language model utilizes this enriched context to produce more accurate and grounded answers.
+
+Auto merging retrieval - 
+1. Hierarchical Document Splitting: Documents are divided into segments of varying sizes, creating a tree-like structure with parent and child nodes. This hierarchical organization allows the system to manage and retrieve information at different levels of granularity.
+2. Retrieval and Merging: When a query is processed, the system identifies relevant leaf nodes (the smallest document segments). If multiple leaf nodes under the same parent node are deemed relevant, the system merges these segments, retrieving the parent node instead. This consolidation provides a broader context, enhancing the quality of information fed into the language model. 
 
 
 
