@@ -715,6 +715,13 @@ Auto merging retrieval -
 2. Retrieval and Merging: When a query is processed, the system identifies relevant leaf nodes (the smallest document segments). If multiple leaf nodes under the same parent node are deemed relevant, the system merges these segments, retrieving the parent node instead. This consolidation provides a broader context, enhancing the quality of information fed into the language model. 
 
 
+Ways to do rag evaluation - 
+Human evaluation - manually checking
+Llm eval - making llm do the evaluation this almost as accurate as the human one but more scalable 
+Ground truth eval - using ground truth data, less accurate and less scalable 
+Traditional nlp based - using Bert less accuracy but more scalable 
+
+
 
 Function calling - 
 Function calling is the ability to reliably connect LLMs to external tools to enable 
