@@ -728,3 +728,16 @@ https://www.promptingguide.ai/applications/context-caching
 Prompt caching in Claude - 
 
 Vector DB based caching -
+
+Contextual Retireval - 
+
+Context + Chunks, Maybe use reranking, can also use BM25
+This post introduces "Contextual Retrieval," a technique that improves the retrieval step in Retrieval-Augmented Generation (RAG) by using Contextual Embeddings and Contextual BM25, which reduces failed retrievals by 49%, and by 67% when combined with reranking.
+RAG systems retrieve relevant chunks from a large knowledge base to generate better responses. Traditional RAG splits the knowledge into smaller chunks and uses embeddings to capture semantic similarity. However, this can fail when the context is lost, leading to poor retrieval. BM25, which focuses on exact word matching, helps retrieve specific information, especially for technical terms or unique identifiers.
+Contextual Retrieval enhances traditional RAG by appending chunk-specific context to each piece of information before embedding it. This method significantly improves retrieval accuracy by reducing context loss in chunks. Using BM25 and embeddings together provides a balance between semantic and lexical matching.
+Prompt caching in Claude allows for a cost-effective deployment of this method. Reranking further improves performance by filtering the most relevant chunks after retrieval, optimizing both accuracy and efficiency.
+In conclusion:
+Embeddings + BM25 work better than embeddings alone.
+Contextualized embeddings significantly improve accuracy.
+Reranking further boosts retrieval accuracy by scoring and selecting the most relevant chunks.
+These methods stack, offering substantial performance gains when combined.
