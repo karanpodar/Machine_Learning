@@ -748,3 +748,9 @@ Embeddings + BM25 work better than embeddings alone.
 Contextualized embeddings significantly improve accuracy.
 Reranking further boosts retrieval accuracy by scoring and selecting the most relevant chunks.
 These methods stack, offering substantial performance gains when combined.
+
+ReAG - reasoning augmented generation
+https://www.superagent.sh/blog/reag-reasoning-augmented-generation
+
+Ever feel like your Al spends more time fetching than thinking? Traditional Retrieval-Augmented Generation (RAG) systems are like that one friend who googles everything mid-conversation helpful, but slow anda bit scattered. Enter R.AG, the cool, brainy cousin. It skips the pre-built indexes, embeddings, and complex pipelines. Instead, it hands raw documents straight to the language model and asks:
+Is this document actually useful? What parts of it really matter? No more endless retrieval noise ReAG cuts through the fluff like a hot knife through stale PDF.. It's like going from "Let me check my notes" to "I read the whole book, and here's the answer."
