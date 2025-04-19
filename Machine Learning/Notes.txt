@@ -602,6 +602,21 @@ to have a llm play multiple roles like developer, tester, project manager....
 and to make it build a final repsonse or outcome
 Similar approach is done in Devin to have it build test and deploy a piece of code
 
+Response validation - 
+There are different ways to validate response from llm if they are hallucinating or not. Few are below-
+instructor and pydantic
+AWS bedrock guardrails have grounding check
+Ragas framework 
+Build agents
+Ragchecker
+
+
+For structured responses from llms use-
+Instructor
+Function calling 
+Json mode in openai
+Post processing like using markdown library from Microsoft. 
+
 
 
 A/B Testing - 
