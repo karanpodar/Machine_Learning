@@ -13,6 +13,12 @@ https://levelup.gitconnected.com/deep-learning-interview-questions-answers-43916
 7. Data-science-ipython-notebooks- (https://Inkd.in/dPmQuPB9)- Stars: ~27.2k
 8. RAG implementation https://github.com/NirDiamant/RAG_Techniques/tree/main
 
+
+Advanced RAG - https://pub.towardsai.net/leveling-up-rag-chatbot-enhancing-chatbots-with-advanced-rag-techniques-dbdbaadadf9a
+
+
+
+
 Supervised - Classification (For Binary values), Regression (For continous values)
 Unsupervised - Clustering, Dimensionality Reduce
 
