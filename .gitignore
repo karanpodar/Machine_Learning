@@ -1,0 +1,9 @@
+/.vscode
+Streamlit/__pycache__/resume_groq_api.cpython-312.pyc
+Selenium/chromedriver-win64/chromedriver.exe
+Selenium/chromedriver-win64/LICENSE.chromedriver
+Selenium/chromedriver-win64.zip
+PySpark/creditcard_2023.csv
+PySpark/archive.zip
+Movie Recommendation/tmdb_5000_credits.csv
+Movie Recommendation/tmdb_5000_movies.csv
